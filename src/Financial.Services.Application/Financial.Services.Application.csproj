@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>22e1a21e-4aa8-4ec3-a25c-adc88c62dbfa</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="MediatR" />
+    <None Remove="Microsoft.Extensions.Configuration.UserSecrets" />
+    <None Remove="InputModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Financial.Services.OpenBank.Core\Financial.Services.OpenBank.Core.csproj" />
+    <ProjectReference Include="..\Financial.Services.OpenBank.Infra\Financial.Services.OpenBank.Infra.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Commands\Account\DeleteAccountCommand.cs" />
+    <Compile Remove="Commands\Account\AddAccountCommand.cs" />
+    <Compile Remove="Commands\Account\EditAccountCommand.cs" />
+    <Compile Remove="Commands\Client\DeleteClientCommand.cs" />
+    <Compile Remove="Commands\Client\EditClientCommand.cs" />
+    <Compile Remove="Commands\Client\AddClientCommand.cs" />
+    <Compile Remove="Handlers\Account\AddAccountCommandHandler.cs" />
+    <Compile Remove="Handlers\Account\DeleteAccountCommandHandler.cs" />
+    <Compile Remove="Handlers\Account\EditAccountCommandHandler.cs" />
+    <Compile Remove="Handlers\Client\EditClientCommandHandler.cs" />
+    <Compile Remove="Handlers\Client\AddClientCommandHandler.cs" />
+    <Compile Remove="Handlers\Client\DeleteClientCommandHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InputModels\" />
+  </ItemGroup>
+</Project>
