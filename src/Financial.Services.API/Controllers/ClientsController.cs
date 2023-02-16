@@ -1,4 +1,5 @@
 ﻿using Financial.Services.Application.InputModels;
+using Financial.Services.Application.Services;
 using Financial.Services.OpenBank.Core.Domain;
 using Financial.Services.OpenBank.Infra.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -8,31 +9,31 @@ namespace Financial.Services.API.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class ClientsController:Controller
+    public class ClientsController : Controller
     {
-        private readonly IRepository<Client> _repository;
+        private readonly IClientService _service;
 
-        public ClientsController(IRepository<Client> repository)
+        public ClientsController(IClientService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         [HttpGet("cpf")]
         public async Task<IActionResult> GetByCPF(string cpf)
         {
-            return Ok(await _repository.GetByCPF(cpf));
+            return Ok(await _service.GetClientByCPF(cpf));
         }
 
         [HttpGet]
-        public async Task <IActionResult> GetClients()
+        public async Task<IActionResult> GetClients()
         {
-            return Ok(await _repository.GetAll());
+            return Ok(await _service.GetAllclients());
         }
 
         [HttpPost]
         public async Task<IActionResult> Post(ClientInputModel client)
         {
-           var response =  _repository.AddNew(client.ToEntity());
+            var response = _service.AddNew(client);
 
             return Ok($"New client Added:{client.Name} ");
         }
@@ -40,8 +41,7 @@ namespace Financial.Services.API.Controllers
         [HttpPut]
         public async Task<IActionResult> Put(ClientInputModel client)
         {
-            var response = _repository.Edit(client.ToEntity());
-
+            var response = _service.Edit(client);
             return Ok();
         }
 
@@ -49,7 +49,7 @@ namespace Financial.Services.API.Controllers
         public async Task<IActionResult> Delete(Guid id)
 
         {
-            var response = _repository.Delete(id);
+            var response = _service.Delete(id);
             return Ok();
         }
 

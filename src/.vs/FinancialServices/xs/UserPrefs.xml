@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{638AAD68-8FAE-417B-A6AA-318D7C6DAF31}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Financial.Services.Application/Services/IClientService.cs">
+    <Files>
+      <File FileName="Financial.Services.API/Controllers/ClientsController.cs" Line="18" Column="10" />
+      <File FileName="Financial.Services.OpenBank.Infra/Cache/CustomCache.cs" Line="23" Column="14" />
+      <File FileName="Financial.Services.Application/Services.cs" Line="2" Column="41" />
+      <File FileName="Financial.Services.Application/InputModels/ClientInputModel.cs" Line="1" Column="1" />
+      <File FileName="Financial.Services.Application/Services/IClientService.cs" Line="9" Column="51" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FinancialServices" expanded="True">
+            <Node name="Application" expanded="True">
+              <Node name="Financial.Services.Application" expanded="True">
+                <Node name="Dependencies" expanded="True" />
+                <Node name="InputModels" expanded="True" />
+                <Node name="Services">
+                  <Node name="IClientService.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Infra" expanded="True">
+              <Node name="Financial.Services.OpenBank.Infra" expanded="True">
+                <Node name="Cache" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Web" expanded="True">
+              <Node name="Financial.Services.API" expanded="True">
+                <Node name="Controllers" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Web.Financial.Services.API PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
