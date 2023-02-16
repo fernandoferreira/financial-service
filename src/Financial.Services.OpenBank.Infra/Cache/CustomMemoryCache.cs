@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Financial.Services.OpenBank.Infra.Cache
 {
-    public class CustomMemoryCache
+    public class CustomMemoryCache : ICustomMemoryCache
     {
         public MemoryCache Cache { get; set; }
 
