@@ -10,10 +10,6 @@ namespace Financial.Services.OpenBank.Infra.Repositories
     {
         private static Dictionary<Guid, Account> _accounts = new Dictionary<Guid, Account>();
 
-        public AccountRepository() 
-        {
-        }
-
         public async Task AddNew(Account item)
         {
             await Task.Run(() => _accounts.Add(item.Id, item));
@@ -40,7 +36,7 @@ namespace Financial.Services.OpenBank.Infra.Repositories
 
         public async Task<IEnumerable<Account>> GetAll()
         {
-           return await Task.Run(() => _accounts.Values.ToList());
+            return await Task.Run(() => _accounts.Values.ToList());
         }
 
         public Task<Account> GetByCPF(string cpf)

@@ -1,7 +1,5 @@
 ﻿using Financial.Services.Application.InputModels;
 using Financial.Services.Application.Services;
-using Financial.Services.OpenBank.Core.Domain;
-using Financial.Services.OpenBank.Infra.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Financial.Services.API.Controllers

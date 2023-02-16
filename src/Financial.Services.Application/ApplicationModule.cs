@@ -1,5 +1,4 @@
-﻿using System;
-using Financial.Services.Application.Services;
+﻿using Financial.Services.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Financial.Services.Application
